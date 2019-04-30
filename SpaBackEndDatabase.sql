@@ -505,3 +505,14 @@ VALUES (10, 'Zenia', '516-517-8003', 1, GETDATE(), 3, 'Unpaid')
 
 SELECT * FROM tblPAppointment p
 SELECT * FROM tblPServiceLog pl
+
+
+--Case 6: Find how many customers were completed on a certain date
+
+ALTER FUNCTION custComplete (@Date DATETIME)
+RETURNS INT
+BEGIN
+	RETURN (SELECT COUNT(*) FROM tblPServiceComplete pc WHERE pc.TimeStarted >= @Date AND pc.TimeStarted < @Date+1)
+END
+
+SELECT dbo.custComplete('2019-04-19') AS 'Customers Completed'

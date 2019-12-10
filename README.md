@@ -1,5 +1,4 @@
 # SpaBackendDatabase
 SQL Database system for a local spa <br>
 
-http://github.com - automatic!
 [Documentation & Test Cases](https://drive.google.com/file/d/10VZZ0JmcvJJ0oBiYX8LJkRpDPcpMYnAF/view)
